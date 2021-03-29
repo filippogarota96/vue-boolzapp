@@ -45,9 +45,9 @@
         <input type="text" value="" placeholder="Cerca o inizia una nuova chat">
       </div>
       <!-- elenco contatti -->
-      <ul class="contatti-container">
+      <ul v-if="contacts.length > 0" class="contatti-container">
         <li v-for="item in contacts" class="contact__item">
-          <img src="img/avatar.jpg" class="profile__img" alt="">
+          <img src="img/avatar_1.jpg" class="profile__img" alt="">
           <h5>{{item.name}}</h5>
         </li>
       </ul>
