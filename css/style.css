@@ -183,3 +183,36 @@ aside {
 .type__icon button:focus, .type-message > input:focus {
   outline: none;
 }
+
+/* stile dei messaggi */
+.chat-container {
+  padding-top: 50px
+}
+.contact-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.row {
+  margin-bottom: 10px;
+}
+.message {
+  max-width: 40%;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 5px;
+  border-radius: 10px;
+}
+.contact__message {
+  background-color: #D5F9BA;
+  margin-right: 70px;
+}
+.message p {
+  margin-bottom: 5px;
+  padding-right: 10px;
+}
+small {
+  font-size: 11px;
+  margin-left: 190px;
+  margin-top: 8px;
+}
