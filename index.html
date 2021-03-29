@@ -46,23 +46,10 @@
       </div>
       <!-- elenco contatti -->
       <ul class="contatti-container">
-        <li class="contact__item">
-          <img src="img/avatar_1.jpg" class="profile__img" alt="">
-          <h5>Michele</h5>
+        <li v-for="item in contacts" class="contact__item">
+          <img src="img/avatar.jpg" class="profile__img" alt="">
+          <h5>{{item.name}}</h5>
         </li>
-        <li class="contact__item">
-          <img src="img/avatar_1.jpg" class="profile__img" alt="">
-          <h5>Michele</h5>
-        </li>
-        <li class="contact__item">
-          <img src="img/avatar_1.jpg" class="profile__img" alt="">
-          <h5>Michele</h5>
-        </li>
-        <li class="contact__item">
-          <img src="img/avatar_1.jpg" class="profile__img" alt="">
-          <h5>Michele</h5>
-        </li>
-
       </ul>
     </aside>
     <!--Area della chat di destra -->
