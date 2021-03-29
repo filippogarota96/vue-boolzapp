@@ -53,6 +53,31 @@ aside {
 }
 .user-icons li a {
   color:#B1B1B1;
+
   font-size: 18px;
 }
 /* /stile dell'aside header  */
+/* stile delle notifiche */
+.notifica {
+  width: 100%;
+  height: 80px;
+  background-color:#8EDAFC;
+  display: flex;
+  align-items: center;
+}
+.bell__wrapper {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px 8px;
+  margin-left: 10px;
+  margin-right: 8px;
+}
+.bell__wrapper > i {
+  font-size: 20px;
+  color: #8EDAFC;
+}
+.notifica__text > a {
+  font-size: 12px;
+  color: #6FA8C2;
+}
+/*/ stile delle notifiche */
