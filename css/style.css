@@ -119,11 +119,21 @@ aside {
   outline: none
 }
 
+/* stile della lista contatti  */
 .contatti-container {
   width: 100%;
   height: 80%;
   overflow-y: auto;
 }
+
+.contact__item {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  align-items: center;
+  border-bottom: 1px solid #F5F5F5;
+}
+
 /* /aside */
 
 .chat-wrapper {
@@ -156,36 +166,10 @@ aside {
   background-image: url("../img/mine.jpg");
 }
 
-.type-message {
-  height: 70px;
-  width: 100%;
-  background-color: #F3EEEA;
-  display: flex;
-  align-items: center;
-}
-.type__icon {
-  width: 60px;
-  text-align: center;
-}
-.type__icon button {
-  width: 100%;
-  font-size: 20px;
-  color: #6B7376;
-  border: none;
-  cursor: pointer;
-}
-.type-message > input {
-  width: calc(100% - 120px);
-  border: none;
-  height: 38px;
-  padding: 0 10px;
-  font-size: 18px;
-}
-.type__icon button:focus, .type-message > input:focus {
-  outline: none;
-}
+
 
 /* stile dei messaggi */
+
 .chat-container {
   padding-top: 50px
 }
@@ -222,4 +206,35 @@ small {
 .user__message {
   background-color: white;
   margin-left: 70px;
+}
+
+/* stile della barra di digitazione del messaggio */
+
+.type-message {
+  height: 70px;
+  width: 100%;
+  background-color: #F3EEEA;
+  display: flex;
+  align-items: center;
+}
+.type__icon {
+  width: 60px;
+  text-align: center;
+}
+.type__icon button {
+  width: 100%;
+  font-size: 20px;
+  color: #6B7376;
+  border: none;
+  cursor: pointer;
+}
+.type-message > input {
+  width: calc(100% - 120px);
+  border: none;
+  height: 38px;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.type__icon button:focus, .type-message > input:focus {
+  outline: none;
 }
