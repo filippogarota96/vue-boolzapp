@@ -47,7 +47,7 @@
       <!-- elenco contatti -->
       <ul v-if="contacts.length > 0" class="contatti-container">
         <li v-for="item in contacts" class="contact__item">
-          <img src="img/avatar_1.jpg" class="profile__img" alt="">
+          <img v-bind:src=" 'img/avatar' + item.avatar + '.jpg' " class="profile__img" alt="">
           <h5>{{item.name}}</h5>
         </li>
       </ul>
