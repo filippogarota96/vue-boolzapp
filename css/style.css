@@ -152,12 +152,34 @@ aside {
 .chat-container {
   width: 100%;
   height:calc(100% - 140px);
-  background-color: red;
   overflow: auto;
+  background-image: url("../img/mine.jpg");
 }
 
 .type-message {
   height: 70px;
   width: 100%;
-  background-color: green;
+  background-color: #F3EEEA;
+  display: flex;
+  align-items: center;
+}
+.type__icon {
+  width: 60px;
+  text-align: center;
+}
+.type__icon button {
+  width: 100%;
+  font-size: 20px;
+  color: #6B7376;
+  border: none;
+  cursor: pointer;
+}
+.type-message > input {
+  width: calc(100% - 120px);
+  border: none;
+  height: 38px;
+  padding: 0 10px;
+}
+.type__icon button:focus, .type-message > input:focus {
+  outline: none;
 }
