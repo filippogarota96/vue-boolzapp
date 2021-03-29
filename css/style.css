@@ -133,7 +133,9 @@ aside {
   align-items: center;
   border-bottom: 1px solid #F5F5F5;
 }
-
+.contact__item:hover {
+  background-color: #E9EBEB;
+}
 /* /aside */
 
 .chat-wrapper {
