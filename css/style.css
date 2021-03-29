@@ -17,18 +17,28 @@ body {
   background-color: #fff;
   margin: 30px auto;
   z-index: 1000;
+  display: flex;
+}
+/* classi comuni*/
+
+.profile__img {
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
-/* stile dell'aside header  */
+/*aside*/
 aside {
   width: 35%;
   height: 100%;
+  overflow: hidden;
 }
+/* stile dell'aside header  */
 
 .aside-header {
   width: 100%;
   height: 70px;
-  background-color:  #EAEAEA;
+  background-color:#EAEAEA;
   border-right: 1px solid #B1B1B1;
   display: flex;
   justify-content: space-between;
@@ -38,11 +48,6 @@ aside {
 .user-container {
   display:flex;
   align-items: center;
-}
-.user-container > img {
-  width: 50px;
-  border-radius: 50%;
-  margin: 0 5px;
 }
 .user-icons ul {
   list-style: none;
@@ -112,4 +117,31 @@ aside {
 
 .find-chat > button:focus, .find-chat > input:focus  {
   outline: none
+}
+
+.contatti-container {
+  width: 100%;
+  height: 80%;
+  overflow-y: auto;
+}
+/* /aside */
+
+.header-chat {
+  width: 65%;
+  height: 70px;
+  background-color:#EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.contact__chat {
+  display:flex;
+  align-items: center;
+}
+
+.header-chat__text > p {
+  font-size: 12px;
+  color: #848A8D;
 }
