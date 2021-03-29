@@ -179,6 +179,7 @@ aside {
   border: none;
   height: 38px;
   padding: 0 10px;
+  font-size: 18px;
 }
 .type__icon button:focus, .type-message > input:focus {
   outline: none;
@@ -215,4 +216,10 @@ small {
   font-size: 11px;
   margin-left: 190px;
   margin-top: 8px;
+  color: #B1B1B1;
+}
+
+.user__message {
+  background-color: white;
+  margin-left: 70px;
 }
