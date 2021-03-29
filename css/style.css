@@ -18,3 +18,41 @@ body {
   margin: 30px auto;
   z-index: 1000;
 }
+
+/* stile dell'aside header  */
+aside {
+  width: 35%;
+  height: 100%;
+}
+
+.aside-header {
+  width: 100%;
+  height: 70px;
+  background-color:  #EAEAEA;
+  border-right: 1px solid #B1B1B1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.user-container {
+  display:flex;
+  align-items: center;
+}
+.user-container > img {
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.user-icons ul {
+  list-style: none;
+  display: flex;
+}
+.user-icons li {
+  padding: 0 8px;
+}
+.user-icons li a {
+  color:#B1B1B1;
+  font-size: 18px;
+}
+/* /stile dell'aside header  */
