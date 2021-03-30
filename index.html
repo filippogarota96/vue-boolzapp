@@ -56,9 +56,9 @@
     <div class="chat-wrapper">
       <header class="header-chat">
         <div class="contact__chat">
-          <img src="img/avatar_1.jpg" class="profile__img" alt="">
+          <img v-bind:src="'img/avatar' + contacts[contactActive].avatar + '.jpg'" class="profile__img" alt="">
           <div class="header-chat__text">
-            <h5>Michele</h5>
+            <h5>{{contacts[contactActive].name}}</h5>
             <p>Ultimo accesso oggi alle</p>
           </div>
         </div>
@@ -73,7 +73,7 @@
       <!-- area dei messaggi -->
       <div class="chat-container">
         <div v-for="(item, index) in contacts[contactActive].messages"  class="contact-row">
-          <div class="message row" v-bind:class="contacts[contactActive].status == 'sent' ? 'ricevuto' : 'inviato'">
+          <div class="message row" v-bind:class="item.status == 'sent' ? 'inviato' : 'ricevuto'">
             <p>{{item.message}}</p>
             <small>{{item.date}}</small>
           </div>
