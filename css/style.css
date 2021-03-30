@@ -190,7 +190,7 @@ aside {
   padding-right: 5px;
   border-radius: 10px;
 }
-.contact__message {
+.sent {
   background-color: #D5F9BA;
   margin-right: 70px;
 }
@@ -205,7 +205,7 @@ small {
   color: #B1B1B1;
 }
 
-.user__message {
+.received {
   background-color: white;
   margin-left: 70px;
 }
