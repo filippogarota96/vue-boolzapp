@@ -81,12 +81,12 @@ const app = new Vue({
         }
       ],
       },
-    ],
-    messageIndex: 0
+    ]
   },
+  messageIndex: 0,
   methods: {
-    printMessage: function(){
-      this.messageIndex++
+    printMessage: function() {
+
     }
   }
 });
