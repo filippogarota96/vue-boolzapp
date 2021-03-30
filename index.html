@@ -46,7 +46,7 @@
       </div>
       <!-- elenco contatti -->
       <ul v-if="contacts.length > 0" class="contatti-container">
-        <li v-for="item in contacts" class="contact__item">
+        <li v-for="(item, index) in contacts" class="contact__item">
           <img v-bind:src=" 'img/avatar' + item.avatar + '.jpg' " class="profile__img" alt="">
           <h5>{{item.name}}</h5>
         </li>
@@ -72,10 +72,10 @@
       </header>
       <!-- area dei messaggi -->
       <div class="chat-container">
-        <div v-for="(item, index) in contacts" class="contact-row">
+        <div v-for="(item, index) in contacts[0].messages" :class="" class="contact-row">
           <div class="sent message row">
-            <p>{{item.messages[index]}}</p>
-            <small>10/01/2020 15:50.00</small>
+            <p>{{item.message}}</p>
+            <small>{{item.date}}</small>
           </div>
         </div>
         <!-- <div class="contact-row row">

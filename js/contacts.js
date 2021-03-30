@@ -83,10 +83,10 @@ const app = new Vue({
       },
     ]
   },
-  messageIndex: 0,
+  contactActive: 0,
   methods: {
     printMessage: function() {
-
+      this.messageIndex++
     }
   }
 });
