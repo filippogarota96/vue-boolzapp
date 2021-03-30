@@ -20,7 +20,7 @@ const app = new Vue({
               date: '10/01/2020 16:15:22',
               message: 'Tutto fatto!',
               status: 'received'
-            }
+            },
           ],
         },
         {
@@ -85,6 +85,12 @@ const app = new Vue({
     contactActive: 0,
   },
   methods: {
-    
-  }
-});
+    printMessage: function(){
+      var newObj = {};
+        newObj.newDate = '10/01/2020 15:50:00';
+        newObj.newMessage = "";
+        newObj.newStatus = 'received';
+        this.contacts[this.contactActive].messages.push(newObj);
+      }
+    }
+  });
