@@ -73,7 +73,7 @@
       <!-- area dei messaggi -->
       <div class="chat-container">
         <div v-for="(item, index) in contacts[contactActive].messages"  class="contact-row">
-          <div class="message row" v-bind:class="contacts[contactActive].status == 'sent' ? 'inviato': 'ricevuto' ">
+          <div class="message row" v-bind:class="contacts[contactActive].status == 'sent' ? 'ricevuto' : 'inviato'">
             <p>{{item.message}}</p>
             <small>{{item.date}}</small>
           </div>
