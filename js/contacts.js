@@ -94,6 +94,7 @@ const app = new Vue({
       newObj.status = 'sent';
       if (newObj.message != '') {
         this.contacts[this.contactActive].messages.push(newObj);
+        this.inputMessage = "";
         var thisContact = this.contacts;
         var thisIndex = this.contactActive;
         setTimeout(function(){

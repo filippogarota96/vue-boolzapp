@@ -13,7 +13,7 @@ body {
 
 #app {
   width: 80%;
-  height: 100vh;
+  height: 90vh;
   background-color: #fff;
   margin: 20px auto;
   z-index: 1000;
@@ -174,7 +174,7 @@ aside {
 
 .chat-container {
   padding-top: 50px;
-  overflow: auto;
+  overflow-y: auto;
 }
 .contact-row {
   width: 100%;
@@ -185,10 +185,11 @@ aside {
   margin-bottom: 10px;
 }
 .message {
-  max-width: 40%;
+  max-width: 330px;
+  min-width: 290px;
   padding-top: 10px;
   padding-left: 20px;
-  padding-right: 5px;
+  padding-right: 10px;
   border-radius: 10px;
 }
 .inviato {
@@ -199,18 +200,22 @@ aside {
 .message p {
   margin-bottom: 5px;
   padding-right: 10px;
+  width: 100%;
 }
-small {
-  font-size: 11px;
-  margin-left: 190px;
+.message .date {
   margin-top: 8px;
-  color: #B1B1B1;
+  text-align: right;
+}
+.message .date small {
+  font-size: 11px;
+  color: #B1B1B1
 }
 
 .ricevuto {
   background-color: white;
   margin-left: 60px;
 }
+
 
 /* stile della barra di digitazione del messaggio */
 

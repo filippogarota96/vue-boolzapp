@@ -52,7 +52,6 @@
           <img v-bind:src=" 'img/avatar' + item.avatar + '.jpg' " class="profile__img" alt="">
           <h5>{{item.name}}</h5>
         </li>
-        
       </ul>
     </aside>
     <!--Area della chat di destra -->
@@ -78,7 +77,10 @@
         <div v-for="(item, index) in contacts[contactActive].messages"  class="contact-row">
           <div class="message row" v-bind:class="item.status == 'sent' ? 'inviato' : 'ricevuto'">
             <p>{{item.message}}</p>
-            <small>{{item.date}}</small>
+            <div class="date">
+              <small>{{item.date}}</small>
+            </div>
+
           </div>
         </div>
       </div>
