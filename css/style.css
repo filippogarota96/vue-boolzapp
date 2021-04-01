@@ -6,16 +6,16 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  height: 100vh;
   background: linear-gradient(to top, #dbdbd2 86%, #009688 86%);
-  overflow: hidden;
+  overflow-y: auto;
+  height: 100vh
 }
 
 #app {
   width: 80%;
-  height: 700px;
+  height: 100vh;
   background-color: #fff;
-  margin: 30px auto;
+  margin: 20px auto;
   z-index: 1000;
   display: flex;
 }
@@ -164,7 +164,6 @@ aside {
 .chat-container {
   width: 100%;
   height:calc(100% - 140px);
-  overflow: auto;
   background-image: url("../img/mine.jpg");
 }
 
@@ -192,8 +191,8 @@ aside {
 }
 .inviato {
   background-color: #D5F9BA;
-  margin-right: 70px;
-  margin-left: 431px;
+  margin-left: 50%;
+
 }
 .message p {
   margin-bottom: 5px;
@@ -208,7 +207,7 @@ small {
 
 .ricevuto {
   background-color: white;
-  margin-left: 70px;
+  margin-left: 60px;
 }
 
 /* stile della barra di digitazione del messaggio */

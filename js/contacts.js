@@ -83,17 +83,29 @@ const app = new Vue({
       },
     ],
     contactActive: 0,
-    inputMessage: ''
+    inputMessage: '',
+    // answer:'ok!'
   },
   methods: {
     printMessage: function(){
-      var newObj = {};
-        newObj.date = '10/01/2020 15:50:00';
-        newObj.message = this.inputMessage;
-        newObj.status = 'sent';
-        if (newObj.newMessage != '') {
-          this.contacts[this.contactActive].messages.push(newObj);
-        }
+      let newObj = {};
+      newObj.date = dayjs().format('DD/MM/YYYY HH:mm:ss');
+      newObj.message = this.inputMessage;
+      newObj.status = 'sent';
+      if (newObj.message != '') {
+        this.contacts[this.contactActive].messages.push(newObj);
+        var thisContact = this.contacts;
+        var thisIndex = this.contactActive;
+        setTimeout(function(){
+          thisContact[thisIndex].messages.push(
+            {
+              date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+              message:'ok!',
+              status:'received'
+            }
+          );
+        }, 1000);
       }
-    }
-  });
+    },
+  }
+});
