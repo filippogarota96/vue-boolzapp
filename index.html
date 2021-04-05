@@ -15,6 +15,7 @@
   <title>Boolzap</title>
 </head>
 <body>
+  <div class="app-container">
   <div id="app">
     <aside>
       <!-- header dell'aside -->
@@ -87,15 +88,21 @@
       <!-- barra di digitazione del messaggio -->
       <div class="type-message">
         <div class="type__icon">
-          <button><i class="far fa-smile"></i></button>
+          <button @click ="show = !show"><i class="far fa-smile"></i></button>
+          <div v-if ="show" class="emoji-menu">
+            <ul>
+              <li v-for ="(item, index) in emojis"><button @click ="inputMessage =  inputMessage + item">{{item}}</button></li>
+            </ul>
+          </div>
         </div>
-        <input type="text" placeholder="Scrivi un messaggio" v-model="inputMessage" v-on:keydown.13 ="printMessage"  >
+        <input type="text" placeholder="Scrivi un messaggio" v-model="inputMessage" v-on:keydown.13 ="printMessage" value ="selectedEmoji" >
         <div class="type__icon">
           <button><i class="fas fa-microphone"></i></button>
         </div>
       </div>
     </div>
   </div>
+</div>
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <!-- <script>console.log(dayjs().format('DD/MM/YYYY HH:mm:ss'))</script> -->
   <script src="js/contacts.js" charset="utf-8"></script>
