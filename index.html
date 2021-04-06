@@ -45,11 +45,11 @@
       <!-- ricerca dei contatti -->
       <div class="find-chat">
         <button type="button" name="button"><i class="fas fa-search"></i></button>
-        <input type="text" id="search" placeholder="Cerca o inizia una nuova chat" value=""  v-on:keydown.enter ="findContact">
+        <input type="text" id="search" placeholder="Cerca o inizia una nuova chat" name="search" v-model ="searchField"  v-on:keydown.enter ="findContact">
       </div>
       <!-- elenco contatti -->
       <ul class="contatti-container">
-        <li v-for="(item, index) in contacts" v-if="item.visible" class="contact__item" @click= "contactActive = index">
+        <li v-for="(item, index) in filteredContacts" class="contact__item" @click= "contactActive = index">
           <img v-bind:src=" 'img/avatar' + item.avatar + '.jpg' " class="profile__img" alt="">
           <h5>{{item.name}}</h5>
         </li>
@@ -76,7 +76,7 @@
       <!-- area dei messaggi -->
       <div class="chat-container">
         <div v-for="(item, index) in contacts[contactActive].messages"  class="contact-row">
-          <div class="message row" v-bind:class="item.status == 'sent' ? 'inviato' : 'ricevuto'">
+          <div class="message row" v-bind:class="{'inviato': item.status == 'sent', 'ricevuto': item.status == 'received'}">
             <p>{{item.message}}</p>
             <div class="date">
               <small>{{item.date}}</small>

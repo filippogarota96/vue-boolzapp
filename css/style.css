@@ -271,3 +271,6 @@ aside {
 .emoji-menu li > button {
   background-color: white;
 }
+.color-red {
+  color: red;
+}

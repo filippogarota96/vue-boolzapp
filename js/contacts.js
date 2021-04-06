@@ -85,6 +85,7 @@ const app = new Vue({
     contactActive: 0,
     inputMessage: '',
     show: false,
+    searchField: '',
     emojis: ['😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇', '🙂', '🙃', '😉', '😌', '😍', '🥰', '😘', '😗', '😙', '😚', '😋', '😛', '😝', '😜', '🤪', '🧐', '🤓', '😎', '🤩', '🥳', '😏', '😒', '😞', '😔', '😟', '😕', '🙁', '😣', '😖', '😫', '😩', '🥺', '😢', '😭', '😤', '😠', '😡', '🤬','🤯', '😳', '🥵', '🥶', '😱', '😨', '😰', '😥', '😓', '🤗', '🤔', '🤭', '🤫', '🤥', '😶', '😐', '😑', '😬', '🙄', '😯', '😦', '😧', '😮', '😲', '🥱', '😴', '🤤', '😪', '😵', '🤐', '🥴', '🤢', '🤮', '🤧', '😷','🤒', '🤕', '🤑', '🤠', '😈', '👿', '👹', '👺', '🤡', '💩', '👻', '💀','👽', '👾', '🤖', '🎃', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾'],
     emojiActive: 0,
     lastAcces: dayjs().format('HH:mm')
@@ -111,15 +112,26 @@ const app = new Vue({
         }, 1000);
       }
     },
-    findContact: function() {
-    let searched = document.getElementById('search').value;
-    this.contacts.forEach((element) => {
-      if (element.name.toLowerCase().includes(searched) == false) {
-        element.visible = false;
-      } else {
-        element.visible = true;
+    // findContact: function() {
+    // let searched = document.getElementById('search').value;
+    // this.contacts.forEach((element) => {
+    //   if (element.name.includes(searched) == false && element.name.toLowerCase().includes(searched) == false) {
+    //     element.visible = false;
+    //   } else  {
+    //     element.visible = true;
+    //   }
+    //   });
+    // }
+  },
+  computed: {
+      
+      filteredContacts: function() {
+          return this.contacts.filter((item, index) => {
+            return item.name.toLowerCase().includes(this.searchField.toLowerCase());
+          });
+        },
+      messageStatus: function() {
+        return false;
       }
-    });
-  }
-}
+    }
 });
