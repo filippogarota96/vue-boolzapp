@@ -104,7 +104,6 @@ aside {
   border: none;
   width: 50px;
   height: 27px;
-  border-radius: 5px;
   cursor: pointer;
 }
 .find-chat button > i {

@@ -42,13 +42,13 @@
           <a href="#">Attiva notifiche desktop</a>
         </div>
       </div>
-
+      <!-- ricerca dei contatti -->
       <div class="find-chat">
-        <button type="button" name="button"><i class="fas fa-search"></i></button>
-        <input type="text" value="" placeholder="Cerca o inizia una nuova chat">
+        <button type="button" name="button" @click ="filterContact"><i class="fas fa-search"></i></button>
+        <input type="text" id="search" placeholder="Cerca o inizia una nuova chat" value="">
       </div>
       <!-- elenco contatti -->
-      <ul v-if="contacts.length > 0" class="contatti-container">
+      <ul v-if="" class="contatti-container">
         <li v-for="(item, index) in contacts" class="contact__item" @click= "contactActive = index">
           <img v-bind:src=" 'img/avatar' + item.avatar + '.jpg' " class="profile__img" alt="">
           <h5>{{item.name}}</h5>

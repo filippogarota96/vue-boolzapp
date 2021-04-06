@@ -87,7 +87,7 @@ const app = new Vue({
     show: false,
     emojis: ['😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇', '🙂', '🙃', '😉', '😌', '😍', '🥰', '😘', '😗', '😙', '😚', '😋', '😛', '😝', '😜', '🤪', '🧐', '🤓', '😎', '🤩', '🥳', '😏', '😒', '😞', '😔', '😟', '😕', '🙁', '😣', '😖', '😫', '😩', '🥺', '😢', '😭', '😤', '😠', '😡', '🤬','🤯', '😳', '🥵', '🥶', '😱', '😨', '😰', '😥', '😓', '🤗', '🤔', '🤭', '🤫', '🤥', '😶', '😐', '😑', '😬', '🙄', '😯', '😦', '😧', '😮', '😲', '🥱', '😴', '🤤', '😪', '😵', '🤐', '🥴', '🤢', '🤮', '🤧', '😷','🤒', '🤕', '🤑', '🤠', '😈', '👿', '👹', '👺', '🤡', '💩', '👻', '💀','👽', '👾', '🤖', '🎃', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾'],
     emojiActive: 0,
-    lastAcces: dayjs().format('HH:mm:ss')
+    lastAcces: dayjs().format('HH:mm')
   },
   methods: {
     printMessage: function(){
@@ -98,8 +98,8 @@ const app = new Vue({
       if (newObj.message != '') {
         this.contacts[this.contactActive].messages.push(newObj);
         this.inputMessage = "";
-        var thisContact = this.contacts;
-        var thisIndex = this.contactActive;
+        let thisContact = this.contacts;
+        let thisIndex = this.contactActive;
         setTimeout(function(){
           thisContact[thisIndex].messages.push(
             {
@@ -111,5 +111,15 @@ const app = new Vue({
         }, 1000);
       }
     },
+    filterContact: function() {
+    let searched = document.getElementById('search').value;
+
+    this.contacts.forEach((element, i) => {
+      if (element.name.includes(searched) == false) {
+        element.visible = false;
+      }
+    });
+
   }
+}
 });
