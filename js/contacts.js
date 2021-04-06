@@ -113,13 +113,13 @@ const app = new Vue({
     },
     filterContact: function() {
     let searched = document.getElementById('search').value;
-
-    this.contacts.forEach((element, i) => {
+    this.contacts.forEach((element) => {
       if (element.name.includes(searched) == false) {
         element.visible = false;
+      } else {
+        element.visible = true;
       }
     });
-
   }
 }
 });

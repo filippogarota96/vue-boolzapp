@@ -48,8 +48,8 @@
         <input type="text" id="search" placeholder="Cerca o inizia una nuova chat" value="">
       </div>
       <!-- elenco contatti -->
-      <ul v-if="" class="contatti-container">
-        <li v-for="(item, index) in contacts" class="contact__item" @click= "contactActive = index">
+      <ul class="contatti-container">
+        <li v-for="(item, index) in contacts" v-if="item.visible" class="contact__item" @click= "contactActive = index">
           <img v-bind:src=" 'img/avatar' + item.avatar + '.jpg' " class="profile__img" alt="">
           <h5>{{item.name}}</h5>
         </li>
