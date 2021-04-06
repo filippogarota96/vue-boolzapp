@@ -111,7 +111,7 @@ const app = new Vue({
         }, 1000);
       }
     },
-    filterContact: function() {
+    findContact: function() {
     let searched = document.getElementById('search').value;
     searched.charAt(0).toUpperCase()
     searched.slice(1)
