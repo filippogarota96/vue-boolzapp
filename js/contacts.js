@@ -113,8 +113,11 @@ const app = new Vue({
     },
     filterContact: function() {
     let searched = document.getElementById('search').value;
+    searched.charAt(0).toUpperCase()
+    searched.slice(1)
+    let searchedUpperCase = searched.charAt(0).toUpperCase() + searched.slice(1);
     this.contacts.forEach((element) => {
-      if (element.name.includes(searched) == false) {
+      if (element.name.includes(searchedUpperCase) == false) {
         element.visible = false;
       } else {
         element.visible = true;
