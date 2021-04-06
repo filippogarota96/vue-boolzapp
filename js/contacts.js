@@ -113,11 +113,8 @@ const app = new Vue({
     },
     findContact: function() {
     let searched = document.getElementById('search').value;
-    searched.charAt(0).toUpperCase()
-    searched.slice(1)
-    let searchedUpperCase = searched.charAt(0).toUpperCase() + searched.slice(1);
     this.contacts.forEach((element) => {
-      if (element.name.includes(searchedUpperCase) == false) {
+      if (element.name.toLowerCase().includes(searched) == false) {
         element.visible = false;
       } else {
         element.visible = true;
